@@ -1,0 +1,343 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #FAF7F2;
+  color: #4A3E3D;
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 95px;
+}
+
+/* Header estilizado y optimizado para celular */
+.header {
+  text-align: center;
+  padding: 2rem 1rem 1.2rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #FAF7F2 100%);
+  border-bottom: 1px solid #EADECF;
+}
+
+.brand-container {
+  display: inline-block;
+}
+
+/* Animación de la Llama de la Vela */
+.candle-icon {
+  width: 26px;
+  height: 40px;
+  margin: 0 auto 0.6rem;
+  position: relative;
+}
+
+.candle-body {
+  width: 12px;
+  height: 18px;
+  background: #D8C3A5;
+  border-radius: 3px 3px 2px 2px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.wick {
+  width: 2px;
+  height: 5px;
+  background: #555;
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.flame {
+  width: 10px;
+  height: 16px;
+  background: #E8A838;
+  border-radius: 50% 50% 35% 35%;
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #E8A838, 0 0 18px #F4C46B;
+  animation: flicker 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-50%) scale(1) rotate(-1deg); opacity: 0.95; }
+  50% { transform: translateX(-50%) scale(1.08) rotate(1deg); opacity: 1; }
+  100% { transform: translateX(-50%) scale(0.95) rotate(-2deg); opacity: 0.9; }
+}
+
+.brand-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5C4328;
+  letter-spacing: 3px;
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.brand-title .ampersand {
+  font-weight: 400;
+  color: #8C6D46;
+  font-style: italic;
+}
+
+.brand-subtitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #8C6D46;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.header-divider {
+  width: 45px;
+  height: 1px;
+  background: #D8C3A5;
+  margin: 0.8rem auto;
+}
+
+.catalog-tag {
+  font-family: 'Cinzel', serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #705537;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Categorías con Scroll Horizontal Fluido en Móvil */
+.categories {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.categories::-webkit-scrollbar {
+  display: none;
+}
+
+.cat-btn {
+  background: #EFE4D6;
+  border: 1px solid #D8C3A5;
+  color: #6E5335;
+  padding: 0.6rem 1.1rem;
+  border-radius: 25px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.cat-btn.active, .cat-btn:active {
+  background: #8C6D46;
+  color: #FFFFFF;
+  border-color: #8C6D46;
+}
+
+/* Grilla Responsiva para Móvil */
+.container {
+  padding: 0 0.8rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+}
+
+@media (max-width: 340px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.card {
+  background: #FFFFFF;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #EADECF;
+  box-shadow: 0 3px 10px rgba(140, 109, 70, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Altura aumentada para hacer el card más rectangular verticalmente */
+.card-img-container {
+  width: 100%;
+  height: 210px; 
+  background-color: #F7F3ED;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .card-img-container {
+    height: 260px;
+  }
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(140, 109, 70, 0.9);
+  color: #fff;
+  font-size: 0.65rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.card-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.95rem;
+  color: #4A3A2A;
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.card-desc {
+  font-size: 0.78rem;
+  color: #706256;
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+@media (min-width: 480px) {
+  .card-footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.card-price {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #8C6D46;
+}
+
+.btn-add {
+  width: 100%;
+  background-color: #8C6D46;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-add:active {
+  background-color: #6E5335;
+}
+
+/* Botón especial para armar combo de velones por WhatsApp */
+.btn-wsp-combo {
+  width: 100%;
+  background-color: #25D366;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.55rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 0.4rem;
+}
+
+.btn-wsp-combo:active {
+  background-color: #1EAE53;
+}
+
+/* Barrita Inferior Fija de WhatsApp */
+.cart-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top: 1.5px solid #EADECF;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
+  z-index: 100;
+}
+
+.cart-info {
+  display: flex;
+  flex-direction: column;
+}
+
+#cart-count {
+  font-size: 0.75rem;
+  color: #706256;
+}
+
+.cart-total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #8C6D46;
+}
+
+#btn-whatsapp {
+  background-color: #25D366;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.75rem 1.1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.3);
+}
+
+#btn-whatsapp:active {
+  background-color: #1EAE53;
+}
