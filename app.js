@@ -1,5 +1,5 @@
 // Número de WhatsApp de Cera & Esencia (con indicativo 57 de Colombia)
-const PHONE_NUMBER = "573000000000"; 
+const PHONE_NUMBER = "573219662791"; 
 
 // Catálogo completo con los 9 moldes actualizados para los combos de velones
 const productos = [
