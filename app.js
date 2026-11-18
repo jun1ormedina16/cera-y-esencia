@@ -205,7 +205,7 @@ function filtrar(cat) {
 }
 
 function armarComboWhatsApp(nombreCombo) {
-  let mensaje = `¡Hola *Cera & Esencia*! 🕯️✨ Me interesa el *${nombreCombo}* y quiero elegir mis moldes entre los 9 disponibles (Sagrada Familia grande/pequeña, Virgen María, Virgen de Guadalupe, etc.) y los colores. ¿Me ayudan a armarlo?`;
+  let mensaje = `¡Hola *Cera & Esencia*! 🕯️✨ Me interesa el *${nombreCombo}* y quiero elegir mis moldes entre los 9 disponibles y los colores. ¿Me ayudan a armarlo?`;
   const url = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(mensaje)}`;
   window.open(url, '_blank');
 }
