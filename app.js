@@ -94,7 +94,7 @@ const productos = [
     nombre: "Vela Arbol de navidad",
     categoria: "unidad",
     descripcion: "Vela En forma de arbol  de pino especial para navidad.",
-    precio: 4000,
+    precio: 3000,
     imagen: "img/IMG_0919.jpeg"
   },
 
@@ -120,7 +120,7 @@ const productos = [
     nombre: "Combo Relicario & Cilindro Estriado",
     categoria: "religioso",
     descripcion: "Figura devocional acompañada de ángel blanco y cilindro texturizado de alta calidad.",
-    precio: 30000,
+    precio: 15000,
     imagen: "img/IMG_0916_2.jpeg"
   },
   {
@@ -128,7 +128,7 @@ const productos = [
     nombre: "Set de Intención 'Sweet & Smile'",
     categoria: "intencion",
     descripcion: "Velas planas con grabados inspiradores (Lovely, Kindly, Sweet, Smile). Pack x4 en tul.",
-    precio: 24000,
+    precio: 12000,
     imagen: "img/IMG_0908_2.jpeg"
   },
   {
@@ -136,7 +136,7 @@ const productos = [
     nombre: "Set Estrellas de los Deseos (Set x5)",
     categoria: "intencion",
     descripcion: "Velas en forma de estrella con grabados: Vivir, Bendición, Dinero, Creer y Amor. Presentación en tul.",
-    precio: 26000,
+    precio: 10000,
     imagen: "img/IMG_0907.jpeg"
   },
     {
