@@ -94,7 +94,7 @@ const productos = [
     nombre: "Vela Arbol de navidad",
     categoria: "unidad",
     descripcion: "Vela En forma de arbol  de pino especial para navidad.",
-    precio: 3000,
+    precio: 4000,
     imagen: "img/IMG_0919.jpeg"
   },
 
